@@ -8,7 +8,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 #gem 'mysql2', '>= 0.3.13', '< 0.5'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-gem 'sqlite3', '~> 1.3.6'
+#gem 'sqlite3', '~> 1.3.6'
 gem 'json'
 
 gem 'bootstrap-sass', '~> 3.4.1'
@@ -62,4 +62,12 @@ group :test do
   gem 'database_cleaner'
   gem 'launchy'
   gem 'selenium-webdriver'
+end
+
+group :development, :test do
+ gem 'sqlite3' , '~> 1.3.6'
+end
+
+group :production do
+  gem 'pg'
 end
